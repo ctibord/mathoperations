@@ -9,4 +9,6 @@ int subtract(int count, ...);
 int multiply(int count, ...);
 int intdiv(int num1, int num2, int modulo);
 float realdiv(int num1, int num2);
+int digitsum(int num);
+long factorial(int num);
 #endif //MATHOPERATIONS_MATHOPERATIONS_H

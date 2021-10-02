@@ -2,6 +2,7 @@
 // Author: ctibord
 
 #include <stdarg.h>
+#include <stdlib.h>
 
 int sum(int count, ...);
 int subtract(int count, ...);
@@ -10,6 +11,8 @@ int intdiv(int num1, int num2, int modulo);
 float realdiv(int num1, int num2);
 int digitsum(int num);
 long factorial(int num);
+int digitcount(int num);
+int* fibonacci(int count);
 
 int sum(int count, ...) {
     int result = 0, i;
@@ -77,4 +80,35 @@ long factorial(int num) {
     for (i = 2; i <= num; i++)
         res *= (long) i;
     return res;
+}
+
+int digitcount(int num) {
+    int count = 0;
+    if (num == 0)
+        return 1;
+    while (num != 0) {
+        count++;
+        num /= 10;
+    }
+    return count;
+}
+
+int* fibonacci(int count) {
+    int n1 = 0, n2 = 1, n3, i, *arr;
+    if (count <= 0)
+        return NULL;
+    arr = (int*) malloc(sizeof(int) * count);
+    if (arr == NULL)
+        return NULL;
+    arr[0] = n1;
+    if (count > 1) {
+        arr[1] = n2;
+        for (i = 2; i < count; ++i) {
+            n3 = n1 + n2;
+            arr[i] = n3;
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+    return arr;
 }

@@ -7,5 +7,5 @@
 int sum(int count, ...);
 int subtract(int count, ...);
 int multiply(int count, ...);
-int intdiv(int num1, int num2);
+int intdiv(int num1, int num2, int modulo);
 #endif //MATHOPERATIONS_MATHOPERATIONS_H

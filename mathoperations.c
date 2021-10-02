@@ -6,7 +6,7 @@
 int sum(int count, ...);
 int subtract(int count, ...);
 int multiply(int count, ...);
-int intdiv(int num1, int num2);
+int intdiv(int num1, int num2, int modulo);
 
 int sum(int count, ...) {
     int result = 0, i;
@@ -44,8 +44,11 @@ int multiply(int count, ...) {
     return result;
 }
 
-int intdiv(int num1, int num2) {
+// If you want to use modulo, please pass 1 as third argument. Otherwise, type any number.
+int intdiv(int num1, int num2, int modulo) {
     if (num2 == 0)
         return 0;
-    else return num1 / num2;
+    else if (modulo == 1)
+        return num1 / num2;
+    else return num1 % num2;
 }

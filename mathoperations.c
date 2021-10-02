@@ -13,6 +13,7 @@ int digitsum(int num);
 long factorial(int num);
 int digitcount(int num);
 int* fibonacci(int count);
+int power(int num, int powerno);
 
 int sum(int count, ...) {
     int result = 0, i;
@@ -111,4 +112,11 @@ int* fibonacci(int count) {
         }
     }
     return arr;
+}
+
+int power(int num, int powerno) {
+    int res = 1, i;
+    for (i = 0; i < powerno; i++)
+        res *= num;
+    return res;
 }

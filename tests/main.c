@@ -23,5 +23,6 @@ int main() {
         free(fib);
         fib = NULL;
     } else printf("Error while getting Fibonacci sequence...\n");
+    printf("Power of 2^4 = %d\n", power(2, 4));
     return 0;
 }

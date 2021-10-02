@@ -13,4 +13,5 @@ int digitsum(int num);
 long factorial(int num);
 int digitcount(int num);
 int* fibonacci(int count);
+int power(int num, int powerno);
 #endif //MATHOPERATIONS_MATHOPERATIONS_H

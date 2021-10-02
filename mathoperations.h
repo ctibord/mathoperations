@@ -11,4 +11,6 @@ int intdiv(int num1, int num2, int modulo);
 float realdiv(int num1, int num2);
 int digitsum(int num);
 long factorial(int num);
+int digitcount(int num);
+int* fibonacci(int count);
 #endif //MATHOPERATIONS_MATHOPERATIONS_H
